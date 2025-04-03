@@ -24,7 +24,7 @@
     <p id="displayedLetter">Press a Key</p>
 
     <script>
-        // Object to map each letter to a specific color
+        
         const colorMap = {
             'a': 'red',
             'b': 'blue',
@@ -54,19 +54,19 @@
             'z': 'slateblue'
         };
 
-        // Function to handle keydown events
+        
         function handleKeyPress(event) {
-            const letter = event.key.toLowerCase(); // Get the pressed key
+            const letter = event.key.toLowerCase();
 
-            // Check if the pressed key is a letter and exists in the color map
+            
             if (colorMap[letter]) {
                 const displayedLetter = document.getElementById('displayedLetter');
-                displayedLetter.textContent = letter.toUpperCase(); // Show the letter
-                displayedLetter.style.color = colorMap[letter]; // Change the color
+                displayedLetter.textContent = letter.toUpperCase(); 
+                displayedLetter.style.color = colorMap[letter]; 
             }
         }
 
-        // Listen for keydown events on the document
+        
         document.addEventListener('keydown', handleKeyPress);
     </script>
 
