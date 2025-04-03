@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH ASSIGNMENT</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #displayedLetter {
+            font-size: 100px;
+            color: black;
+        }
+    </style>
+
+
+    <p id="displayedLetter">Press a Key</p>
+
+    <script>
+        // Object to map each letter to a specific color
+        const colorMap = {
+            'a': 'red',
+            'b': 'blue',
+            'c': 'green',
+            'd': 'orange',
+            'e': 'purple',
+            'f': 'pink',
+            'g': 'brown',
+            'h': 'cyan',
+            'i': 'magenta',
+            'j': 'lime',
+            'k': 'yellow',
+            'l': 'teal',
+            'm': 'navy',
+            'n': 'violet',
+            'o': 'gray',
+            'p': 'gold',
+            'q': 'crimson',
+            'r': 'indigo',
+            's': 'salmon',
+            't': 'olive',
+            'u': 'tan',
+            'v': 'coral',
+            'w': 'chartreuse',
+            'x': 'sienna',
+            'y': 'darkviolet',
+            'z': 'slateblue'
+        };
+
+        // Function to handle keydown events
+        function handleKeyPress(event) {
+            const letter = event.key.toLowerCase(); // Get the pressed key
+
+            // Check if the pressed key is a letter and exists in the color map
+            if (colorMap[letter]) {
+                const displayedLetter = document.getElementById('displayedLetter');
+                displayedLetter.textContent = letter.toUpperCase(); // Show the letter
+                displayedLetter.style.color = colorMap[letter]; // Change the color
+            }
+        }
+
+        // Listen for keydown events on the document
+        document.addEventListener('keydown', handleKeyPress);
+    </script>
+
+</body>
+</html>
