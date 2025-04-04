@@ -1,0 +1,15 @@
+
+body {
+    background-color: black;
+    width: 100%;
+}
+
+p {
+    
+    border: 1px solid rgb(0, 255, 179);
+    border-radius: 7px;
+    padding: 25px;
+    box-shadow: 8px 6px 6px 7px #fff;
+    color: #fff;
+
+}
